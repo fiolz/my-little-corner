@@ -1,0 +1,223 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Outfit:wght@100..900&family=Zen+Dots&display=swap');
+
+/* === BASE STYLE === */
+:root {
+  --text: #fcf2fff7;
+  --accent: #fffffff3;
+  --muted: #ffffff;
+  --radius: 14px;
+  --shadow: 0 6px 20px rgba(0, 0, 0, 0.08);
+  --font-utama : 'zen dots', 'outfit', sans-serif;
+  --font-heading: 'Outfit', sans-serif;
+  --font-body: 'Montserrat Alternates', 'Inter', system-ui, sans-serif;
+}
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: var(--font-body);
+  font-weight: 600;
+  background: radial-gradient(circle, rgb(11, 0, 35) 0%, rgb(36, 0, 38) 35%, rgba(0, 0, 0, 1) 100%);
+  color: var(--text);
+  margin: 0;
+  padding: 0;
+  line-height: 1.6;
+}
+
+/* === HEADER === */
+header {
+  text-align: center;
+  padding: 60px 20px 30px;
+  max-width: 800px;
+  margin: auto;
+}
+
+header h1 {
+  font-family: var(--font-utama);
+  font-size: 5rem;
+  font-weight: 100;
+  color: var(--accent);
+  margin-bottom: 10px;
+  text-shadow:
+    0 0 40px rgba(250, 12, 210, 0.707);
+}
+
+header h3 {
+  color: var(--muted);
+  font-weight: 400;
+  font-size: 1.5rem;
+  margin-bottom: 12px;
+}
+
+header q {
+  font-style: italic;
+  color: #f9f6f6ef;
+}
+
+.ikon {
+  letter-spacing: 20px;
+  font-size: 20px;
+  color: var(--accent);
+  transition: 0.3s ease;
+  margin-top: 30px;
+  text-shadow:
+    0 0 20px rgb(255, 207, 247);
+}
+
+/* === MAIN CONTENT === */
+main {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 20px 80px;
+}
+
+h2 {
+  font-family: var(--font-heading);
+  color: var(--accent);
+  margin-top: 50px;
+  margin-bottom: 12px;
+  text-shadow:
+    0 0 20px rgba(255, 207, 247, 0.813);
+}
+
+h3 {
+  font-family: var(--font-heading);
+  margin-bottom: 6px;
+  font-size: 1.4rem;
+}
+
+p {
+  margin-bottom: 14px;
+}
+
+details summary {
+  cursor: pointer;
+  font-weight: 600;
+  color: var(--accent);
+  margin-top: 14px;
+  font-size: 1.05rem;
+}
+
+details[open] summary {
+  color: var(--text);
+}
+
+ul, ol {
+  margin: 10px 0 20px 24px;
+}
+
+a {
+  color: var(--accent);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+a:hover {
+  color: #fd4dfd;
+}
+
+/* === PROJECT SECTION === */
+.project-list {
+  list-style: none;
+  padding: 0;
+  display: grid;
+  gap: 40px;
+  margin-top: 20px;
+}
+
+.project-list li {
+  background: rgba(183, 40, 255, 0.049); 
+  backdrop-filter: blur(15px);    
+  -webkit-backdrop-filter: blur(15px);
+  border-radius: 14px;
+  padding: 20px;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 20px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.project-list li:hover {
+  transform: scale(1.02);
+  transition: transform 0.3s ease;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.project-list img,
+.project-list video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9; /* Tambahan ini */
+  object-fit: cover;
+  border-radius: var(--radius);
+  margin-top: 10px;
+  max-width: 640px;
+  margin: auto;
+}
+
+.personal-quote {
+  font-style: italic;
+  color: var(--muted);
+  border-left: 4px solid var(--accent);
+  padding-left: 12px;
+}
+
+/* === BUTTON === */
+button {
+  background: var(--accent);
+  color: rgb(16, 1, 16);
+  border: none;
+  padding: 10px 18px;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: 0.25s ease;
+  font-weight: 600;
+}
+
+button:hover {
+  background: #44004c;
+  transform: translateY(-2px);
+  color: #ffffff;
+}
+
+hr {
+  margin-top: 20px;
+}
+
+select {
+  padding: 5px;
+  margin: 10px;
+  margin-top: 10px;
+  border-radius: 8px;
+  border: 1px solid var(--accent);
+  background-color: var(--bg);
+  color: rgb(255, 183, 255);
+  font-family: var(--font-heading);
+  font-size: 16px;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 700px) {
+  header h1 {
+    font-size: 2.5rem;
+  }
+
+  header h3, q {
+    font-size: small;
+  }
+
+  .project-list {
+    gap: 24px;
+  }
+
+  .project-list img,
+  .project-list video {
+  aspect-ratio: 16 / 9;
+  height: 40vh;
+  }
+}
