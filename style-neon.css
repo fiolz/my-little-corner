@@ -147,7 +147,7 @@ a:hover {
 }
 
 .project-list img,
-.project-list video {
+.project-list iframe {
   display: block;
   width: 100%;
   aspect-ratio: 16 / 9; /* Tambahan ini */
@@ -216,8 +216,9 @@ select {
   }
 
   .project-list img,
-  .project-list video {
+  .project-list iframe {
   aspect-ratio: 16 / 9;
   height: 40vh;
   }
+
 }
