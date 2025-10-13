@@ -166,6 +166,11 @@ button {
   font-weight: 600;
 }
 
+.project-list button {
+  margin-top: 20px;
+  width: 140px;
+}
+
 button:hover {
   background: #060b47;
   transform: translateY(-2px);
@@ -211,3 +216,4 @@ select {
   }
 
 }
+
